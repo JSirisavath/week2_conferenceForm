@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conference Form Site</title>
+
+    <!-- Bootstrap Styles-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <!--google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles CSS -->
+
+    <link rel="stylesheet" href="styles.css" type="text/css"
+  </head>
+
+  <!-- margin size 3 for the body page (From Bootstrap)-->
+  <body class="m-3">
+    <!-- Jumbotron element from Bootstrap -->
+
+    <div class="jumbotron header">
+      <h1>Conference Form</h1>
+    </div>
+
+    <div class="row">
+      <!-- Column for form instruction -->
+      <div class="col-md-5">
+        <!-- Form instruction  -->
+        <div class="instructions m-3">
+          <h6>Please Fill out this conference registration form!</h6>
+        </div>
+      </div>
+      <!-- End of div col for information -->
+
+      <!-- ///////////////////////////////// -->
+
+      <!-- div col for form fill out -->
+      <div class="col-md-7">
+        <!-- Form Input for Students -->
+        <!-- Form margin sz 5 left and right  -->
+        <form class="ml-5 mr-5">
+          <div>
+            <!-- Name text input -->
+            <label for="Name">Name:</label>
+
+            <!-- Student name input -->
+            <input
+              id="Name"
+              class="form-control"
+              type="text"
+              maxlength="70"
+              required
+            />
+
+            <br />
+
+            <!-- ///////////////////////////////// -->
+            <!-- Password label -->
+            <label for="Password">Password:</label>
+
+            <!--  Password input -->
+            <input
+              id="Password"
+              class="form-control"
+              type="password"
+              required
+            />
+
+            <br />
+            <!-- ///////////////////////////////// -->
+            <!-- Email label -->
+            <label for="Email">Email:</label>
+
+            <!--  Email input -->
+            <input id="Email" class="form-control" type="email" required />
+
+            <br />
+
+            <!-- ///////////////////////////////// -->
+
+            <!-- t-shirt size selection -->
+            <div class="col-md-5">
+              <h2>All attendees receive a free t-shirt</h2>
+              <select required>
+                <option value="">Select size</option>
+                <option>Small</option>
+                <option>Medium</option>
+                <option>Large</option>
+              </select>
+            </div>
+
+            <br />
+            <!-- ///////////////////////////////// -->
+            <!-- Date of birth selection -->
+            <div class="dateOfBirthSelection">
+              <label for="dateSelection">Date Of Birth </label>
+              <input type="date" required />
+            </div>
+          </div>
+
+          <!-- ///////////////////////////////// -->
+          <br />
+          <!-- Email update Label -->
+          <p class="form-text">Receive Email Updates?</p>
+
+          <!-- Radio buttons choice pair if student or naw -->
+          <!-- Yes -->
+          <div class="form-check">
+            <input
+              name="emailUpdateCheck"
+              type="radio"
+              id="yes"
+              class="form-check-input"
+              checked
+            />
+            <label for="yesToUpdate" class="form-check-label">Yes</label>
+          </div>
+
+          <!-- ///////////////////////////////// -->
+          <!-- No -->
+          <div class="form-check">
+            <input
+              name="emailUpdateCheck"
+              type="radio"
+              id="no"
+              class="form-check-input"
+            />
+            <label for="noUpdates" class="form-check-label">No</label>
+          </div>
+
+          <br />
+          <!-- ///////////////////////////////// -->
+          <!-- Session Checkbox -->
+          <div class="form-check">
+            <label for="sessions">Choose sessions</label>
+            <input
+              type="checkbox"
+              id="morningAttend"
+              name="morningAttendOption"
+              value="Morning"
+            />
+            <label for="morningAttend">Morning</label>
+
+            <input
+              type="checkbox"
+              id="Afternoon"
+              name="afternoonAttendOption"
+              value="Afternoon"
+            />
+            <label for="afternoonAttend">Afternoon</label>
+          </div>
+
+          <br />
+
+          <!-- ///////////////////////////////// -->
+          <!-- Special Request Area -->
+          <div class="form-check">
+            <label for="specialRequestText" class="specalRequestLabel"
+              >Any Special Request?</label
+            >
+
+            <!-- Comment text area -->
+            <textarea
+              id="specialComments"
+              class="form-control"
+              cols="70"
+              rows="7"
+            ></textarea>
+          </div>
+
+          <!-- ///////////////////////////////// -->
+
+          <!-- Submit button -->
+          <input type="submit" class="btn btn-secondary btn-lg mt-4" />
+        </form>
+        <!-- End of form control element
+       -->
+
+        <!-- End of div col for form  -->
+      </div>
+
+      <!-- End of div row for devices -->
+    </div>
+  </body>
+</html>
